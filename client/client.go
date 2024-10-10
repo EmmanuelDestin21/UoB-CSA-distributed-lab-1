@@ -40,7 +40,7 @@ func main() {
 	conn, e := net.Dial("tcp", *addrPtr)
 
 	if e != nil {
-		println(e)
+		println(e.Error())
 	}
 
 	go read(&conn)
