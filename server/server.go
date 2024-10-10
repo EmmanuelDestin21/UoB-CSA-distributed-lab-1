@@ -41,6 +41,7 @@ func handleClient(client net.Conn, clientid int, msgs chan Message) {
 	reader := bufio.NewReader(client)
 	for {
 		msg, err := reader.ReadString('\n')
+		fmt.Println(msg)
 
 		if err != nil {
 			break
